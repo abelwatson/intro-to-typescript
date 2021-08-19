@@ -11,7 +11,7 @@ count = 10;
 const fName = "Abel";
 
 //this makes a variable of "type" any (interchangeable)
-let testing; //avoid using "type" any! Can break the code.
+let testing: number; //avoid using "type" any(blank)! Can break the code.
 testing = 5;
 // testing = "People"
 
@@ -29,16 +29,22 @@ let student: Student = {
     grade: 12,
 }
 
+let student2 = {
+    fname: "Jane",
+    lname: "Adam",
+    grade: 23,
+}
+
 function toString(student: Student): string {
     return JSON.stringify(student)
 }
 
-const toStringArrow = (student: Student): string => {
-    return JSON.stringify(student)
+const toStringArrow = (student2: Student): string => {
+    return JSON.stringify(student2)
 }
 
 
-// console.log(toString(student))
+console.log(toStringArrow(student2))
 
 
 

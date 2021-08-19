@@ -2,29 +2,34 @@
 // console.log("Hello World!")
 //using "tsc -w --preserveWatchOutput" to auto update nodemon
 //count is of "type" number
-var count = 5;
+let count = 5;
 count = 10;
 // count = "Justin"; //not of "type" number
 //Const's type is a literal
-var fName = "Abel";
+const fName = "Abel";
 //this makes a variable of "type" any (interchangeable)
-var testing; //avoid using "type" any! Can break the code.
+let testing; //avoid using "type" any(blank)! Can break the code.
 testing = 5;
 //declaring an object
-var student = {
+let student = {
     fname: "Cherron",
     lname: "Simes",
     grade: 12,
 };
+let student2 = {
+    fname: "Jane",
+    lname: "Adam",
+    grade: 23,
+};
 function toString(student) {
     return JSON.stringify(student);
 }
-var toStringArrow = function (student) {
-    return JSON.stringify(student);
+const toStringArrow = (student2) => {
+    return JSON.stringify(student2);
 };
-// console.log(toString(student))
+console.log(toStringArrow(student2));
 function add(x, y) {
-    var result = x + y;
+    let result = x + y;
     return result;
 }
 //Tuple(JavaScript Tuples)
@@ -35,6 +40,6 @@ function sendMessage() {
             grade: 12
         }];
 }
-var _a = sendMessage(), statusResult = _a[0], data = _a[1];
+const [statusResult, data] = sendMessage();
 if (statusResult == "success")
     console.log(data);
