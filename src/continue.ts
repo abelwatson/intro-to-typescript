@@ -34,6 +34,3 @@ if (myObj instanceof Array) {
     let values = Object.values(myObj)
     console.log(values)
 }
-// myObj.map()
-
-// interface
